@@ -1,0 +1,110 @@
+.container-ripple {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+
+.container-ripple .loader .item-loader {
+  display: inline-flex;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin: 0 5px;
+  position: relative;
+}
+
+.container-ripple .loader  .item-loader::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: inherit;
+  border-radius: 50%;
+  z-index: 1;
+  animation: ripple-animate 2.8s ease-out infinite;
+  background: #055bb7 !important;
+}
+
+@keyframes ripple-animate {
+  from {
+    opacity: 1;
+    transform: scale(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: scale(2.3);
+  }
+}
+
+.container-ripple .item-loader:first-child {
+  background-color: #d8e2e6;
+}
+
+.container-ripple .item-loader:first-child::before {
+  animation-delay: 0.2s;
+}
+
+.container-ripple .item-loader:nth-child(2) {
+  background-color: #9faec4;
+}
+
+.container-ripple .item-loader:nth-child(2)::before {
+  animation-delay: 0.4s;
+}
+
+.container-ripple .item-loader:nth-child(3) {
+  background-color: #6d87c0;
+}
+
+.container-ripple .item-loader:nth-child(3)::before {
+  animation-delay: 0.6s;
+}
+
+.container-ripple .item-loader:nth-child(4) {
+  background-color: #8b96b5;
+}
+
+.container-ripple .item-loader:nth-child(4)::before {
+  animation-delay: 0.8s;
+}
+
+.container-ripple .item-loader:last-child {
+  background-color: #bfc6ca;
+}
+
+.container-ripple .item-loader:last-child::before {
+  animation-delay: 1s;
+}
+
+.container-ripple .text-loader {
+  font-size: 20px;
+  font-weight: bolder;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  width: max-content;
+  max-width: max-content;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0 auto;
+  animation: typing 4s steps(38) infinite alternate, blink 1s steps(15) infinite alternate;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}

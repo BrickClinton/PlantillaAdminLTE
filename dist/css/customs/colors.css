@@ -1,7 +1,7 @@
 
 :root {
   --lightblue: #58addf;
-  --blue: #196ac2;
+  --blue: #055bb7;
   --indigo: #6610f2;
   --purple: #6f42c1;
   --pink: #e83e8c;
@@ -14,7 +14,7 @@
   --white: #fff;
   --gray: #6c757d;
   --gray-dark: #343a40;
-  --primary: #1875d8;
+  --primary: #055bb7;
   --secondary: #6c757d;
   --success: #28a745;
   --info: #17a2b8;
@@ -35,7 +35,7 @@
 }
 
 .dark-mode {
-  --lightblue: #86bad8;
+  --lightblue: #449ccf;
   --navy: #002c59;
   --olive: #74c8a3;
   --lime: #67ffa9;
@@ -81,7 +81,7 @@
 }
 
 .nav-sidebar.nav-legacy > .nav-item > .nav-link.active {
-  background-color: rgba(0,0,0, 0.1) !important;
+  background-color: rgba(0,0,0, 0.3) !important;
   border-color: var(--lightblue) !important;
   color: var(--lightblue) !important;
 }
@@ -93,3 +93,22 @@
 }
 
 /*FIN  SIDEBAR */
+
+
+/* TOAST */
+.dark-mode 
+.swal2-popup {
+  display: none;
+  position: relative;
+  box-sizing: border-box;
+  grid-template-columns: minmax(0, 100%);
+  width: 32em;
+  max-width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: 0.3rem;
+  background: #252829 !important;
+  color: #545454;
+  font-family: inherit;
+  font-size: 1rem;
+}
