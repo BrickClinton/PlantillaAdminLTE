@@ -10,8 +10,19 @@
   z-index: 9999;
   overflow: hidden;
   background: #1a1814;
-  background: linear-gradient(56deg, rgba(32, 35, 73, 0.267),
-  rgba(9, 49, 56, 0.432));
+  background: linear-gradient(56deg, rgba(73, 32, 57, 0.267),
+  rgba(10, 53, 61, 0.432));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#preloader > * {
+  margin-top: 13%;
+  font-weight: bold;
+  text-align: center;
+  font-size: 33px;
+  color: #055bb7;
 }
 
 .dark-mode #preloader{
@@ -23,7 +34,7 @@
   position: fixed;
   top: calc(50% - 30px);
   left: calc(50% - 30px);
-  border: 8px solid transparent;
+  border: 10px solid transparent;
   border-top-color: #055bb7;
   border-bottom-color: #055bb7;
   border-radius: 50%;
