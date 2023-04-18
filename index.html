@@ -13,13 +13,17 @@
   <!-- Admin LTE -->
   <link rel="stylesheet" href="dist/css/adminlte.min.css">
 
+  <!-- Loader -->
+  <link rel="stylesheet" href="dist/css/loaders/preloaderFullScren.css">
+
   <!-- Custom style -->
   <link rel="stylesheet" href="dist/css/customs/user-account.css">
   <link rel="stylesheet" href="dist/css/customs/switch-dark-mode.css">
   <link rel="stylesheet" href="dist/css/customs/colors.css">
 
-  <!-- Loader -->
-  <link rel="stylesheet" href="dist/css/loaders/preloaderFullScren.css">
+  <!-- Reloj -->
+  <link rel="stylesheet" href="./plugins/oclock/oclock.css">
+
 </head>
 <body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed">
 <div class="wrapper">
@@ -39,18 +43,10 @@
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
 
-      <!-- Switch -->
-      <li class="nav-item item-switch-darkmode ml-2">
-        <div class="theme-switch-wrapper nav-link dropdown-toggle">
-          <label class="theme-switch" for="checkbox-theme">
-            <input type="checkbox" id="checkbox-theme" />
-            <span class="slider round">
-              <i class="fa fa-solid fa-sun"></i>
-              <i class="fa fa-solid fa-moon"></i>
-            </span>
-          </label>
-        </div>
-      </li>
+      <!-- o'clock -->
+      <div class="oclock ml-4 hidden-xs">
+        <span id="time"></span>
+      </div>
     </ul>
 
     <!-- Right navbar links -->
@@ -146,7 +142,7 @@
       <li class="nav-item dropdown user user-menu">
         <a href="#" class="nav-link text-overflow" data-toggle="dropdown" aria-expanded="false">
           <img src="dist/img/user/default_profile_avatar.svg" class="user-image user-image-top" alt="User Image">
-          <span class="hidden-xs text-truncate"> <?= $_SESSION['nombres']; ?></span>
+          <span class="hidden-xs text-truncate">Nombre</span>
         </a>
 
         <div class="dropdown-menu content-user">
@@ -154,6 +150,19 @@
           <a class="dropdown-item" href="#"><i class="fas fa-users-cog"></i> Administrar cuentas</a>
           <hr>
           <a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a>
+        </div>
+      </li>
+
+      <!-- Switch -->
+      <li class="nav-item item-switch-darkmode ml-2">
+        <div class="theme-switch-wrapper nav-link dropdown-toggle">
+          <label class="theme-switch" for="checkbox-theme">
+            <input type="checkbox" id="checkbox-theme" />
+            <span class="slider round">
+              <i class="fa fa-solid fa-sun"></i>
+              <i class="fa fa-solid fa-moon"></i>
+            </span>
+          </label>
         </div>
       </li>
 
@@ -189,6 +198,7 @@
           <input class="form-control form-control-sidebar" type="search" placeholder="Buscar" aria-label="Search">
         </div>
       </div>
+      
       <!-- Sidebar Menu -->
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar text-sm flex-column nav-child-indent nav-collapse-hide-child" data-widget="treeview" role="menu" data-accordion="false">
@@ -312,6 +322,8 @@
 <!-- AdminLTE App -->
 <script src="dist/js/adminlte.js"></script>
 
+<!-- Reloj -->
+<script src="./plugins/oclock/oclock.js"></script>c
 
 <!-- Cargar pagina incrustada -->
 <script src="./dist/js/loadweb.js"></script>
@@ -324,9 +336,9 @@
     var view = getParam("view");
 
     if (view != false)
-      $("#content-data").load(`views/${view}.php`);
+      $("#content-data").load(`views/${view}.html`);
     else
-      $("#content-data").load(`views/welcome.php`);
+      $("#content-data").load(`views/welcome.html`);
   });
 </script>
 </body>

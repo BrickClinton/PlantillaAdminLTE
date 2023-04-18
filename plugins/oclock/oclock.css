@@ -1,0 +1,36 @@
+@font-face {
+  font-family: 'DS-Digital';
+  font-style: normal;
+  font-weight: 700;
+  src: local('DS-Digital'), url('https://fonts.cdnfonts.com/s/15049/DS-DIGIB.woff') format('woff');
+}
+
+.oclock{
+  font-family: 'DS-Digital', sans-serif;
+  background: #055bb7;
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+  border-radius: 6px;
+  padding: 0 5px 0 5px;
+  min-width: 170px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dark-mode .oclock{
+  background-color: #27445f;
+}
+
+#date{
+  font-size: 20px;
+  margin-bottom: 5px;
+  letter-spacing: 10px;
+}
+
+#time{
+  font-size: 22px;
+  letter-spacing: 3px;
+  font-weight: bold;
+}
