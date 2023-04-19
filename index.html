@@ -335,7 +335,9 @@
 
 <script>
   $(document).ready(function (){
-    var view = getParam("view");
+    var view = getParamPro("view");
+      var lastVisitedURL = sessionStorage.getItem("lastVisitedURL");
+      if(lastVisitedURL !== null){view = lastVisitedURL;}
 
     if (view != false)
       $("#content-data").load(`views/${view}.html`);
